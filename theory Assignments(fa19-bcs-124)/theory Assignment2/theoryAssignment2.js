@@ -1,216 +1,444 @@
-import React from "react"; 
- import { StyleSheet,View, Text , } from "react-native"; 
- import { SafeAreaView } from "react-native-web"; 
-  
- export default function Ludo(props){ 
-  
-     return( 
-         <> 
-         <SafeAreaView> 
-  
-         <View style={styles.greenbox}> 
-              
-              
-       
-  
-        <View style={styles.yellowbox}> 
-        
-        <View style={styles.smallbox3}> </View> 
-        <View style={styles.smallbox4}>  </View> 
-     
-        </View> 
-        <View style={styles.smallbox}> </View> 
-        <View style={styles.smallbox2}>  </View> 
-        <View style={styles.smallbox}> </View> 
-         
-         
-      
-         
-         
-          
-        </View> 
-         
-         
-  
-         
-  
-  
-        
-     
-         
-         
-        
-       
-       
-         
-          
-        <View style={styles.centerbox}> 
-        
-        </View> 
-         
-  
-         
-         
-        <View style={styles.redbox}> 
-       
-          
-          
-         <View style={styles.bluebox}> 
-                 
-        <View style={styles.smallbox3}> </View> 
-        <View style={styles.smallbox4}>  </View> 
-         
-        </View> 
-         
-        </View> 
-          
-         
-         
-     
-         
-         </SafeAreaView> 
-        
-       
-         
-          
-         </> 
-     
-     
-  
-     ) 
- } 
- const styles= StyleSheet.create({ 
-  
- greenbox:{ 
-     height:200, 
-     width:200, 
-    backgroundColor:"green" 
- } 
- , 
- redbox:{ 
-     height:200, 
-     width:200, 
-    backgroundColor:"red", 
-   marginTop: 30 
-      
- }, 
- yellowbox:{ 
-     height:200, 
-     width:200, 
-    backgroundColor:"yellow", 
-    marginLeft:600 
-    
-  
-   
-    
-    
-      
- }, 
- bluebox:{ 
-     height:200, 
-     width:200, 
-    backgroundColor:"blue", 
-    marginLeft:598,    
-    
-  
-   
-    
-    
-      
- }, 
- centerbox:{ 
-     height:150, 
-     width:150, 
-    backgroundColor:"white", 
-  alignSelf:"center", 
-  marginRight:500, 
-  marginTop:20, 
- borderWidth:5 
-   
-   
-    
-    
-    
-  
-   
-    
-    
-      
- }, 
-  
- smallbox:{ 
-     height:45 
-     ,width:45, 
-     flexDirection:"row", 
-     marginRight:5, 
-      
-  
-      backgroundColor:"white", 
-     flexWrap:"wrap", 
-     borderWidth:5, 
-     marginRight:56, 
-      
-   
-  
-   
-      
- }, 
- smallbox2:{ 
-     height:45 
-     ,width:45, 
-     flexDirection:"coloumn-reverse", 
-     marginRight:56, 
-  
-     
-  
-     borderWidth:5, 
-     flexDirection:"column", 
-     
-     
-      
-   
-  
-   
-      
- }, 
- smallbox3:{ 
-     height:45 
-     ,width:45 
-     , backgroundColor:"white", 
-     borderWidth:5, 
-     marginTop:70, 
-     marginRight:40, 
-     flexDirection:"row-reverse", 
-     flexWrap:"wrap" 
-     
-      
-   
-  
-   
-      
- }, 
- smallbox4:{ 
-     height:45 
-     ,width:45 
-     , backgroundColor:"white", 
-     borderWidth:5, 
-     alignSelf:"center", 
-     marginLeft:50, 
-     marginBottom:7, 
-    flexDirection:"column-reverse", 
-     marginBottom:29 
-  
-  
-     
-      
-   
-  
-   
-      
- } 
-  
-  
-  
-  
-  
- })
+import { View, StyleSheet } from "react-native";
+
+
+export default function App(){
+  return (
+    <View style={styles.container}>
+      <View style={styles.board}>
+        <View style={[{ backgroundColor: "green" }, styles.box]}>
+          <View
+            style={{
+              height: 100,
+              width: 100,
+              backgroundColor: "darkgreen",
+              padding: 10,
+              flexDirection: "row",
+              flexWrap: "wrap",
+            }}
+          >
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 150,
+            width: 75,
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+          }}
+        >
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+
+          <View style={styles.whitebox} />
+
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "yellow" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "yellow" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "yellow" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "yellow" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "yellow" }]} />
+
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "yellow" }]} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+        </View>
+
+        <View style={[{ backgroundColor: "yellow" }, styles.box]}>
+          <View
+            style={{
+              height: 100,
+              width: 100,
+              backgroundColor: "orange",
+              padding: 10,
+              flexDirection: "row",
+              flexWrap: "wrap",
+            }}
+          >
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 75,
+            width: 150,
+            flexDirection: "row",
+
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+          }}
+        >
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "green" }]} />
+
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+        </View>
+
+        <View
+          style={{
+            width: 75,
+            height: 75,
+            backgroundColor: "#fff",
+            flexDirection:"row",
+            flexWrap:"wrap",
+            borderWidth:25,
+            borderRadius:55,
+            borderLeftColor:"green",
+            borderTopColor:"yellow",
+            borderRightColor:"blue",
+            borderBottomColor:"red"
+            
+          }}
+        >
+            
+        </View>
+
+        <View
+          style={{
+            height: 75,
+            width: 150,
+            flexDirection: "row",
+
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+          }}
+        >
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={styles.whitebox} />
+
+          <View style={styles.whitebox} />
+          
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+          <View style={styles.whitebox} />
+          
+          <View style={styles.whitebox}/>
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={styles.whitebox} />
+        </View>
+
+
+
+        <View style={[{ backgroundColor: "red" }, styles.box]}>
+          <View
+            style={{
+              height: 100,
+              width: 100,
+              backgroundColor: "darkred",
+              padding: 10,
+              flexDirection: "row",
+              flexWrap: "wrap",
+            }}
+          >
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 150,
+            width: 75,
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+          }}
+        >
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+
+          <View style={styles.whitebox} />
+
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+
+          <View style={[styles.whitebox, { backgroundColor: "red" }]} />
+          <View style={styles.whitebox} />
+
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+          <View style={[styles.whitebox, { backgroundColor: "blue" }]} />
+
+          <View style={styles.whitebox} />
+          <View style={styles.whitebox} />
+        </View>
+
+
+
+
+        <View style={[{ backgroundColor: "blue" }, styles.box]}>
+          <View
+            style={{
+              height: 100,
+              width: 100,
+              backgroundColor: "darkblue",
+              padding: 10,
+              flexDirection: "row",
+              flexWrap: "wrap",
+            }}
+          >
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+
+            <View
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                backgroundColor: "#fff",
+                marginLeft: 5,
+                marginRight: 5,
+              }}
+            />
+          </View>
+        </View>
+
+
+
+      </View>
+    </View>
+  );
+
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  board: {
+    backgroundColor: "grey",
+    width: 375,
+    height: 375,
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  box: {
+    height: 150,
+    width: 150,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  whitebox: {
+    width: 25,
+    height: 25,
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderColor: 1,
+    padding: 0,
+    margin: 0,
+  },
+});
